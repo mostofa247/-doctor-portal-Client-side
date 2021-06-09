@@ -22,7 +22,7 @@ const AddDoctor = () => {
         formData.append('name', info.name);
         formData.append('email', info.email);
 
-        fetch('https://salty-plateau-71286.herokuapp.com/addADoctor', {
+        fetch('https://cryptic-anchorage-36359.herokuapp.com/addADoctor', {
             method: 'POST',
             body: formData
         })
@@ -43,15 +43,15 @@ const AddDoctor = () => {
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Email address</label>
-                        <input onBlur={handleBlur} type="email" className="form-control" name="email" placeholder="Enter email" />
+                        <input onBlur={handleBlur} type="email" required className="form-control" name="email" placeholder="Enter email" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="exampleInputPassword1">Name</label>
-                        <input onBlur={handleBlur} type="text" className="form-control" name="name" placeholder="Name" />
+                        <input onBlur={handleBlur} type="text" required className="form-control" name="name" placeholder="Name" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="exampleInputPassword1">Upload a image</label>
-                        <input onChange={handleFileChange} type="file" className="form-control" id="exampleInputPassword1" placeholder="Picture" />
+                        <input onChange={handleFileChange} type="file" required className="form-control" id="exampleInputPassword1" placeholder="Picture" />
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
